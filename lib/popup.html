@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <style>
+            :root {
+                --cb-color-primary: #46cdf5;
+                --cb-color-secondary: #a67098;
+                --cb-color-link: #0078ff;
+                --cb-color-bg-secondary: #f7f7f7;
+
+                --cb-x1: 4px;
+                --cb-x2: 8px;
+                --cb-x3: 12px;
+                --cb-x4: 16px;
+                --cb-x5: 20px;
+            }
+            * {
+                font-family: sans-serif;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            .title {
+                padding: var(--cb-x2) var(--cb-x1);
+            }
+            .title a, .title a:hover, .title a:active {
+                color: var(--cb-color-primary);
+                text-decoration: none;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+            }
+            .button {
+                border-radius: var(--cb-x1);
+                border: 1px solid var(--cb-color-primary);
+                padding: var(--cb-x1) var(--cb-x2);
+                color: black;
+                background: white;
+                cursor: pointer;
+            }
+
+            .button_type-primary {
+                color: white;
+                background: var(--cb-color-primary);
+            }
+
+            .card {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card__header {
+                background-color: var(--cb-color-bg-secondary);
+                padding: var(--cb-x4) var(--cb-x1);
+            }
+
+            .card__content {
+                display: flex;
+                flex-direction: column;
+                padding: var(--cb-x1);
+                padding-bottom: var(--cb-x4);
+            }
+
+            .card__footer {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: var(--cb-x2);
+                background-color: var(--cb-color-bg-secondary);
+                padding: var(--cb-x1);
+            }
+
+            .item {
+                display: flex;
+                justify-content: space-between;
+                filter: blur(2px);
+            }
+
+            .highlight {
+                color: var(--cb-color-secondary);
+            }
+
+            .link {
+                color: var(--cb-color-link);
+                cursor: pointer;
+            }
+
+            .loader {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border-top: 2px solid var(--cb-color-primary);
+                border-bottom: 2px solid var(--cb-color-primary);
+                border-right: 2px solid var(--cb-color-primary);
+                border-left: 2px solid transparent;
+                animation: spin 1s infinite linear;
+            }
+
+            .show {
+                display: flex;
+            }
+
+            .hide {
+                display: none;
+            }
+
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body style="width:300px">
+        <h1 class="title"><a href="https://chatterbox.one" target="_blank" rel="noopener noreferrer">chatterbox.one</a></h1>
+        <div class="content" data-id="cb-popup-content">
+            <div class="loader"></div>
+            <button class="button button_type-primary hide" data-id="cb-login-button">Sign in</button>
+        </div>
+    </body>
+    <script src="./popup.js"></script>
+</html>

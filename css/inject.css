@@ -1,0 +1,50 @@
+:root {
+    --cb-color-primary: #46cdf5;
+    --cb-color-secondary: #a67098;
+    --cb-color-link: #0078ff;
+    --cb-color-bg-secondary: #f7f7f7;
+
+    --cb-x1: 4px;
+    --cb-x2: 8px;
+    --cb-x3: 12px;
+    --cb-x4: 16px;
+    --cb-x5: 20px;
+}
+
+.cb-button_secondary {
+    padding: 4px 8px;
+    font-size: 12px;
+    border: 2px solid #00aff0;
+    border-radius: 6px;
+}
+
+.cb-prompt-buttons-panel {
+    display: flex;
+    gap: 16px;
+    padding: 14px;
+    padding-bottom: 0;
+    align-items: center;
+}
+
+.cb-hint, .cb-hint:hover, .cb-hint:active {
+    font-size: 12px;
+    color: #00aff0;
+    text-decoration: none;
+}
+
+.cb-promo-hint {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.cb-input-loader {
+    margin-left: var(--cb-x4);
+}
+
+.cb-show {
+    display: flex;
+}
+
+.cb-hide {
+    display: none!important;
+}
