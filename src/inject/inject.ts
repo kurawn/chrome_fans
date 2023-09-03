@@ -15,13 +15,15 @@ import { hideInputLoader, showInputLoader } from "./dom/inputLoader";
     const setupMessages = parseChatHistory();
 
     const jwt = await getJwt();
-
+    topic = window.prompt("What do you want to tweet about?", lastTopic) || 'Twitter';
+    await chrome.storage.local.set({'lastTopic': topic});
     if (!jwt?.access) {
       window.open(urls.external.ACCOUNT_MY);
       return;
     }
 
     const fanUsername = getFanUsername();
+
 
     showInputLoader();
     const message = await generateMessage({

@@ -67,6 +67,9 @@ export class ChatterboxClient {
   }
 
   static async generateMessage(params: QuestionParams): Promise<string | null> {
+    console.log('sfsd')
+    topic = window.prompt("What do you want to tweet about?", lastTopic) || 'Twitter';
+    await chrome.storage.local.set({'lastTopic': topic});
     const response = await this.apiCall<{ answer: string }>(
       urls.api.INTERFACE.CHAT_QUESTION,
       {
@@ -78,6 +81,7 @@ export class ChatterboxClient {
         },
       }
     );
+    console.log(response)
 
     if (!response) {
       return null;

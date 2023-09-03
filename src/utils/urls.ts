@@ -1,4 +1,4 @@
-const BASE_API_URL = 'https://chatterbox.one';
+const BASE_API_URL = 'http://127.0.0.1:8000';
 const url = (...path: string[]) => [BASE_API_URL, ...path].join('/');
 const apiUrl = (...path: string[]) => url('api', ...path);
 

@@ -3,7 +3,6 @@
  */
 export const parseJwt = () => {
   const rawJwt = document.querySelector("#jwt-token")?.textContent;
-
   if (!rawJwt) {
     return;
   }

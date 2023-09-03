@@ -16,7 +16,7 @@
           "js": ["lib/inject.js"]
         },
         {
-          "matches": ["https://chatterbox.one/*"],
+          "matches": ["http://127.0.0.1:8000/*"],
           "js": ["lib/inject_chatterbox.js"]
         }
       ],

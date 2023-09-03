@@ -23,7 +23,7 @@ export const PromptButtonsPanel = ({
       .join("")}
     <a href="${
       urls.external.CHATTERBOX
-    }" class="cb-hint cb-promo-hint" target="_blank" rel="noopener noreferrer">by chatterbox.one</a>`;
+    }" class="cb-hint cb-promo-hint" target="_blank" rel="noopener noreferrer">by djds</a>`;
 
   const notAuthContent = `<a href="${urls.external.ACCOUNT_MY}" class="cb-hint" target="_blank" rel="noopener noreferrer">Войти в chatterbox.one</a>`;
 
